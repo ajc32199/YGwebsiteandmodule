@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import BlogList from "./BlogList";
 
 const useFetch = (url) => {
   const [data, setData] = useState(null);
@@ -7,24 +6,26 @@ const useFetch = (url) => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    console.log("use effect ran");
-    fetch(url)
-      .then((res) => {
-        if (!res.ok) {
-          throw Error("Network response was not ok");
-        }
-        return res.json(); // Return the parsed JSON
-      })
-      .then((data) => {
-        console.log(data);
-        setData(data);
-        setIsPending(false);
-        setError(null);
-      })
-      .catch((err) => {
-        setError(err.message);
-        setIsPending(false);
-      });
+    setTimeout(() => {
+      fetch(url)
+        .then((res) => {
+          if (!res.ok) {
+            // error coming back from server
+            throw Error("could not fetch the data for that resource");
+          }
+          return res.json();
+        })
+        .then((data) => {
+          setIsPending(false);
+          setData(data);
+          setError(null);
+        })
+        .catch((err) => {
+          // auto catches network / connection error
+          setIsPending(false);
+          setError(err.message);
+        });
+    }, 1000);
   }, [url]);
 
   return { data, isPending, error };
