@@ -1,8 +1,7 @@
-const NavBar = () => {
+const Navbar = () => {
   return (
     <nav className="navbar">
-      <h1>TKE Module</h1>
-      <h2>Upsilon Gamma</h2>
+      <h1>The Dojo Blog</h1>
       <div className="links">
         <a href="/">Home</a>
         <a
@@ -13,12 +12,11 @@ const NavBar = () => {
             borderRadius: "8px",
           }}
         >
-          {" "}
-          Sign In
+          New Blog
         </a>
       </div>
     </nav>
   );
 };
 
-export default NavBar;
+export default Navbar;
