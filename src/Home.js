@@ -11,10 +11,10 @@ const Home = () => {
 
   return (
     <div className="home">
-      <p1>
+      <p>
         Welcome to the homepage of TKE Duluth: Upsilon Gamma. Here you can view
         and edit member status.{" "}
-      </p1>
+      </p>
     </div>
   );
 };

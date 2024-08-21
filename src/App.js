@@ -3,8 +3,18 @@ import Home from "./Home";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Create from "./Create";
 import Members from "./Members";
+import React, { useEffect, useState } from "react";
 
 function App() {
+  const [backendData, setBackEndData] = useState([{}]);
+
+  useEffect(() => {
+    fetch("/api")
+      .then((response) => response.json())
+      .then((data) => setBackEndData(data));
+    console.log(backendData);
+  }, []);
+
   return (
     <Router>
       <div className="App">
