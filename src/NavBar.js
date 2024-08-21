@@ -4,7 +4,7 @@ const Navbar = () => {
       <h1>TKE Duluth</h1>
       <div className="links">
         <a href="/">Home</a>
-        <a href="/members">Members</a>
+        <a href="/Members">Members</a>
         <a
           href="/create"
           style={{
