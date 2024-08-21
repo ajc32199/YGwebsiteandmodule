@@ -1,9 +1,10 @@
 const Navbar = () => {
   return (
     <nav className="navbar">
-      <h1>The Dojo Blog</h1>
+      <h1>TKE Duluth</h1>
       <div className="links">
         <a href="/">Home</a>
+        <a href="/members">Members</a>
         <a
           href="/create"
           style={{
@@ -12,7 +13,7 @@ const Navbar = () => {
             borderRadius: "8px",
           }}
         >
-          New Blog
+          Sign In
         </a>
       </div>
     </nav>

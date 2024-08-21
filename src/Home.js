@@ -11,9 +11,10 @@ const Home = () => {
 
   return (
     <div className="home">
-      {error && <div>{error}</div>}
-      {isPending && <div>Loading...</div>}
-      {blogs && <BlogList blogs={blogs} />}
+      <p1>
+        Welcome to the homepage of TKE Duluth: Upsilon Gamma. Here you can view
+        and edit member status.{" "}
+      </p1>
     </div>
   );
 };
