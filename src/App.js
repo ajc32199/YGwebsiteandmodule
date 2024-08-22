@@ -1,7 +1,7 @@
 import Navbar from "./NavBar";
 import Home from "./Home";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Create from "./Create";
+import Create from "./SignIn";
 import Members from "./Members";
 import React, { useEffect, useState } from "react";
 
@@ -22,7 +22,7 @@ function App() {
         <div className="content">
           <Routes>
             <Route exact path="/" element={<Home />} />
-            <Route exact path="/create" element={<Create />} />
+            <Route exact path="/SignIn" element={<Create />} />
             <Route exact path="/Members" element={<Members />} />
           </Routes>
         </div>

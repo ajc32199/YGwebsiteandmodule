@@ -6,7 +6,7 @@ const Navbar = () => {
         <a href="/">Home</a>
         <a href="/Members">Members</a>
         <a
-          href="/create"
+          href="/signin"
           style={{
             color: "white",
             backgroundColor: "#f1356d",
