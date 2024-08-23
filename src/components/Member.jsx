@@ -135,6 +135,53 @@ export default function Member() {
             </div>
           </div>
         </div>
+
+        <div className="grid max-w-2xl grid-cols-1 gap-x-6 gap-y-8">
+          <div className="sm:col-span-2">
+            <label
+              htmlFor="position"
+              className="block text-sm font-medium text-slate-900"
+            >
+              position
+            </label>
+            <div className="mt-2">
+              <div className="flex rounded-md shadow-sm ring-1 ring-inset ring-slate-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600 sm:max-w-md">
+                <input
+                  type="text"
+                  name="position"
+                  id="position"
+                  className="block flex-1 border-0 bg-transparent py-1.5 pl-1 text-slate-900 placeholder:text-slate-400 focus:ring-0 sm:text-sm sm:leading-6"
+                  placeholder="Enter Position currently held"
+                  value={form.position}
+                  onChange={(e) => updateForm({ position: e.target.value })}
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="grid max-w-2xl grid-cols-1 gap-x-6 gap-y-8">
+          <div className="sm:col-span-2">
+            <label
+              htmlFor="grade"
+              className="block text-sm font-medium text-slate-900"
+            >
+              Grade
+            </label>
+            <div className="mt-2">
+              <div className="flex rounded-md shadow-sm ring-1 ring-inset ring-slate-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600 sm:max-w-md">
+                <input
+                  type="text"
+                  name="grade"
+                  id="grade"
+                  className="block flex-1 border-0 bg-transparent py-1.5 pl-1 text-slate-900 placeholder:text-slate-400 focus:ring-0 sm:text-sm sm:leading-6"
+                  placeholder="Enter current grade"
+                  value={form.grade}
+                  onChange={(e) => updateForm({ grade: e.target.value })}
+                />
+              </div>
+            </div>
+          </div>
+        </div>
       </form>
     </>
   );
