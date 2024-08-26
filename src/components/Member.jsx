@@ -182,6 +182,98 @@ export default function Member() {
             </div>
           </div>
         </div>
+        <div className="grid max-w-2xl grid-cols-1 gap-x-6 gap-y-8">
+          <div className="sm:col-span-2">
+            <label
+              htmlFor="debt"
+              className="block text-sm font-medium text-slate-900"
+            >
+              Debt
+            </label>
+            <div className="mt-2">
+              <div className="flex rounded-md shadow-sm ring-1 ring-inset ring-slate-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600 sm:max-w-md">
+                <input
+                  type="text"
+                  name="debt"
+                  id="debt"
+                  className="block flex-1 border-0 bg-transparent py-1.5 pl-1 text-slate-900 placeholder:text-slate-400 focus:ring-0 sm:text-sm sm:leading-6"
+                  placeholder="Enter current debt"
+                  value={form.debt}
+                  onChange={(e) => updateForm({ grade: e.target.value })}
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="grid max-w-2xl grid-cols-1 gap-x-6 gap-y-8">
+          <div className="sm:col-span-2">
+            <label
+              htmlFor="active status"
+              className="block text-sm font-medium text-slate-900"
+            >
+              Active Status
+            </label>
+            <div className="mt-2">
+              <div className="flex rounded-md shadow-sm ring-1 ring-inset ring-slate-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600 sm:max-w-md">
+                <input
+                  type="text"
+                  name="active status"
+                  id="active status"
+                  className="block flex-1 border-0 bg-transparent py-1.5 pl-1 text-slate-900 placeholder:text-slate-400 focus:ring-0 sm:text-sm sm:leading-6"
+                  placeholder="Enter current debt"
+                  value={form.active_status}
+                  onChange={(e) => updateForm({ grade: e.target.value })}
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="grid max-w-2xl grid-cols-1 gap-x-6 gap-y-8">
+          <div className="sm:col-span-2">
+            <label
+              htmlFor="scroll number"
+              className="block text-sm font-medium text-slate-900"
+            >
+              Scroll Number
+            </label>
+            <div className="mt-2">
+              <div className="flex rounded-md shadow-sm ring-1 ring-inset ring-slate-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600 sm:max-w-md">
+                <input
+                  type="text"
+                  name="scroll number"
+                  id="scroll number"
+                  className="block flex-1 border-0 bg-transparent py-1.5 pl-1 text-slate-900 placeholder:text-slate-400 focus:ring-0 sm:text-sm sm:leading-6"
+                  placeholder="scroll number"
+                  value={form.scroll_number}
+                  onChange={(e) => updateForm({ grade: e.target.value })}
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="grid max-w-2xl grid-cols-1 gap-x-6 gap-y-8">
+          <div className="sm:col-span-2">
+            <label
+              htmlFor="comments"
+              className="block text-sm font-medium text-slate-900"
+            >
+              Comments
+            </label>
+            <div className="mt-2">
+              <div className="flex rounded-md shadow-sm ring-1 ring-inset ring-slate-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600 sm:max-w-md">
+                <input
+                  type="text"
+                  name="comments"
+                  id="comments"
+                  className="block flex-1 border-0 bg-transparent py-1.5 pl-1 text-slate-900 placeholder:text-slate-400 focus:ring-0 sm:text-sm sm:leading-6"
+                  placeholder="comments"
+                  value={form.comments}
+                  onChange={(e) => updateForm({ grade: e.target.value })}
+                />
+              </div>
+            </div>
+          </div>
+        </div>
       </form>
     </>
   );
