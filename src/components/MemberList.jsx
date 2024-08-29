@@ -52,7 +52,7 @@ export default function MemberList() {
 
   useEffect(() => {
     async function getMembers() {
-      const response = await fetch("http://localhost:5000/members");
+      const response = await fetch("http://localhost:5050/members");
       if (!response.ok) {
         const message = "Error: ${response.statusText}";
         console.error(message);
@@ -66,7 +66,7 @@ export default function MemberList() {
   }, [members.length]);
 
   async function deleteMembers(id) {
-    await fetch(`http://localhost:5000/members/${id}`, {
+    await fetch(`http://localhost:5050/members/${id}`, {
       method: "DELETE",
     });
     const newMembers = members.filter((el) => el._id !== id);

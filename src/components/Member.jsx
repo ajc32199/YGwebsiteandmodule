@@ -54,7 +54,7 @@ export default function Member() {
       let response;
       if (isNew) {
         //if we are adding a new member we will POST to /members
-        response = await fetch("http://localhost:5000/members", {
+        response = await fetch("http://localhost:5050/members", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -63,7 +63,7 @@ export default function Member() {
         });
       } else {
         //if we are updating an existing member we will PATCH to /members/:id
-        response = await fetch(`http://localhost:5000/members/${params.id}`, {
+        response = await fetch(`http://localhost:5050/members/${params.id}`, {
           method: "PATCH",
           headers: {
             "Content-Type": "application/json",
