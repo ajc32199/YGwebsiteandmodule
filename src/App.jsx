@@ -16,38 +16,36 @@ import '@aws-amplify/ui-react/styles.css';
 import awsExports from './aws-exports';
 
 // Imports the Quiz component from Quiz.js for use in this file.
-import HomePage from './HomePage';
+import HomePage from './pages/HomePage';
+import NavBar from './NavBar';
+import Members from './pages/Members';
+import About from './pages/About';
 
 // Configures the Amplify library with the settings from aws-exports.js, which includes all the AWS service configurations for this project.
 Amplify.configure(awsExports);
 
 function App() {
-  return (
-    <div className="App">
-      <Authenticator>
-        {({ signOut }) => (
-          <main>
-            <header className='App-header'>
-              {/* Quiz Component */}
-              <HomePage />
-              {/* Sign Out Button */}
-              <button 
-                onClick={signOut} 
-                style={{ 
-                  margin: '20px', 
-                  fontSize: '0.8rem', 
-                  padding: '5px 10px', 
-                  marginTop: '20px'
-                }}
-              >
-                Sign Out
-              </button>
-            </header>
-          </main>
-        )}
-      </Authenticator>
-    </div>
-  );
+  let component
+  switch(window.location.pathname){
+    case "/":
+      component = <HomePage />;
+      break;
+    case "/about":
+      component = <About />;
+      break;
+    case "/members":
+      component = <Members />;
+      break;
+
+  }
+
+  return(
+    <>
+      <NavBar />
+      {component}
+    </>
+  )
 }
 
-export default withAuthenticator(App);
+export default App;
+
