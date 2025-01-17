@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import '../HomePage.css';
-function HomePage() {
+import './HomePage.css';
+export function HomePage() {
   return(
     <div>
       <header>
@@ -9,7 +9,5 @@ function HomePage() {
         <p>This is the home page of the Fraternity Module</p>
       </header>
     </div>
-  )
+  );
 }
-
-export default HomePage;

@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import { Routes, Route, Router } from 'react-router-dom';
 
 // Imports the Amplify library from 'aws-amplify' package. This is used to configure your app to interact with AWS services.
 import {Amplify} from 'aws-amplify';
@@ -16,34 +17,25 @@ import '@aws-amplify/ui-react/styles.css';
 import awsExports from './aws-exports';
 
 // Imports the Quiz component from Quiz.js for use in this file.
-import HomePage from './pages/HomePage';
-import NavBar from './NavBar';
-import Members from './pages/Members';
-import About from './pages/About';
+import {About, Members, HomePage} from './pages/index.jsx';
+import NavBar from './pages/NavBar';
+
 
 // Configures the Amplify library with the settings from aws-exports.js, which includes all the AWS service configurations for this project.
 Amplify.configure(awsExports);
 
 function App() {
-  let component
-  switch(window.location.pathname){
-    case "/":
-      component = <HomePage />;
-      break;
-    case "/about":
-      component = <About />;
-      break;
-    case "/members":
-      component = <Members />;
-      break;
-
-  }
-
   return(
-    <>
+    <div className='App'>
       <NavBar />
-      {component}
-    </>
+      <Routes>
+        <Route path='/' element={<HomePage />}/>
+        <Route path="/about" element={<About />}/>
+        <Route path="/members" element={<Members />}/>
+        <Route path="/home" element={<HomePage />}/>
+
+      </Routes>
+    </div>
   )
 }
 

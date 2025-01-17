@@ -1,4 +1,4 @@
-export default function About(){
+export function About(){
     return(
         <div>
             <header>
@@ -6,5 +6,6 @@ export default function About(){
                 <p>This is the about page of the Fraternity Module</p>
             </header>
         </div>
-    )
+    );
 }
+

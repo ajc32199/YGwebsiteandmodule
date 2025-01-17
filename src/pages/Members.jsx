@@ -1,4 +1,4 @@
-export default function Members() {
+export function Members() {
   return (
     <div>
       <h1>Members</h1>
